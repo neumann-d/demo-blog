@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Row from 'react-bootstrap/Row'
 import { color } from './theme'
 
 const Footer = styled.div`
@@ -6,11 +7,11 @@ const Footer = styled.div`
   background-color: ${color.darkGrey};
   height: auto;
   padding: 20px;
-  color: rgba(255,255,255,.5);
+  color: ${color.greyWhite};
   text-align: center;
 `
 
-const CustomRow = styled.div`
+const CustomRow = styled(Row)`
   margin: ${props => props.margin};
 `
 

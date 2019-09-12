@@ -22,6 +22,7 @@ const color = {
   red: '#e57373',
   white: '#fefefe',
   black: '#000000',
+  greyWhite: 'rgba(255,255,255,.5)'
 }
 
 const zIndex = {

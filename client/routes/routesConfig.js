@@ -1,6 +1,7 @@
 import Home from '../pages/Home/routes'
+import AboutUs from '../pages/AboutUs/routes'
 
-const mainRoutes = [...Home ]
+const mainRoutes = [...Home, ...AboutUs ]
 //TODO: Create a error page
 const errorRoutes = []
 

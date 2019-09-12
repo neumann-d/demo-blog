@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Link } from './style'
+import { color } from '../../pages/theme'
 // Navbar
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -12,17 +13,17 @@ const NavbarComponent = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#Home">Home</Nav.Link>
-          <Nav.Link href="#AboutUs">About Us</Nav.Link>
-          <Nav.Link href="#Services">Services</Nav.Link>
+          <Link to='/' showBlock={false} color={color.greyWhite}>Home</Link>
+          <Link to='/aboutUs' showBlock={false} color={color.greyWhite}>About Us</Link>
+          <Link to='/services' showBlock={false} color={color.greyWhite}>Services</Link>
           <NavDropdown title="Products" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#Product1">Product 1</NavDropdown.Item>
-            <NavDropdown.Item href="#Product2">Product 2</NavDropdown.Item>
-            <NavDropdown.Item href="#Product3">Product 3</NavDropdown.Item>
+            <Link to="/Product1" showBlock={true} color={color.black}>Product 1</Link>
+            <Link to="/Product2" showBlock={true} color={color.black}>Product 2</Link>
+            <Link to="/Product3" showBlock={true} color={color.black}>Product 3</Link>
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="#Contact">Contact</Nav.Link>
+          <Link to='/contact' showBlock={false} color={color.greyWhite}>Contact</Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

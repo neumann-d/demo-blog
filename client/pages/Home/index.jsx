@@ -10,6 +10,7 @@ import Carousel from '../../components/Carousel'
 
 // Style
 import { ElementContainer, List, Item, Card } from './style'
+import { CustomRow } from '../style'
 
 // Data
 import data from '../data.json'
@@ -37,7 +38,7 @@ const Home = () => {
   }
   return (
     <Container>
-      <ElementContainer noGutters><Carousel /></ElementContainer>
+      <CustomRow margin={'70px 0 20px 0'}><Carousel /></CustomRow>
       <Jumbotron>
         <h1>Lorem Ipsum!</h1>
         <p>
@@ -47,86 +48,80 @@ const Home = () => {
           <Button variant="primary">Learn more</Button>
         </p>
       </Jumbotron>
-      <ElementContainer>
+      <CustomRow margin={'10px 0 0 0'}>
         <Col xs={12} sm={6} lg={4}>
-          <ElementContainer>
-            <Card>
-              <Card.Img variant="top" src={lab}/>
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  catchy caption text to define the purpose of the image
-                </Card.Text>
-                <Collapse in={open1}>
-                  <div id="collapse-text">
-                    {getDescriptionsInList(data.home.problems)}
-                  </div>
-                </Collapse>
-                <Button
-                  variant="primary"
-                  onClick={() => setOpen1(!open1)}
-                  aria-controls="collapse-text"
-                  aria-expanded={open1}
-                >
-                  {open1 ? 'See less' : 'See more'}
-                </Button>
-              </Card.Body>
-            </Card>
-          </ElementContainer>
+          <Card>
+            <Card.Img variant="top" src={lab}/>
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                catchy caption text to define the purpose of the image
+              </Card.Text>
+              <Collapse in={open1}>
+                <div id="collapse-text">
+                  {getDescriptionsInList(data.home.problems)}
+                </div>
+              </Collapse>
+              <Button
+                variant="primary"
+                onClick={() => setOpen1(!open1)}
+                aria-controls="collapse-text"
+                aria-expanded={open1}
+              >
+                {open1 ? 'See less' : 'See more'}
+              </Button>
+            </Card.Body>
+          </Card>
         </Col>
         <Col xs={12} sm={6} lg={4}>
-          <ElementContainer>
-            <Card>
-              <Card.Img variant="top" src={lab}/>
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  catchy caption text to define the purpose of the image
-                </Card.Text>
-                <Collapse in={open2}>
-                  <div id="collapse-text">
-                    {getDescriptionsInList(data.home.problems)}
-                  </div>
-                </Collapse>
-                <Button
-                  variant="primary"
-                  onClick={() => setOpen2(!open2)}
-                  aria-controls="collapse-text"
-                  aria-expanded={open2}
-                >
-                  {open2 ? 'See less' : 'See more'}
-                </Button>
-              </Card.Body>
-            </Card>
-          </ElementContainer>
+          <Card>
+            <Card.Img variant="top" src={lab}/>
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                catchy caption text to define the purpose of the image
+              </Card.Text>
+              <Collapse in={open2}>
+                <div id="collapse-text">
+                  {getDescriptionsInList(data.home.problems)}
+                </div>
+              </Collapse>
+              <Button
+                variant="primary"
+                onClick={() => setOpen2(!open2)}
+                aria-controls="collapse-text"
+                aria-expanded={open2}
+              >
+                {open2 ? 'See less' : 'See more'}
+              </Button>
+            </Card.Body>
+          </Card>
         </Col>
         <Col xs={12} sm={6} lg={4}>
-          <ElementContainer>
-            <Card>
-              <Card.Img variant="top" src={lab}/>
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  catchy caption text to define the purpose of the image
-                </Card.Text>
-                <Collapse in={open3}>
-                  <div id="collapse-text">
-                    {getDescriptionsInList(data.home.problems)}
-                  </div>
-                </Collapse>
-                <Button
-                  variant="primary"
-                  onClick={() => setOpen3(!open3)}
-                  aria-controls="collapse-text"
-                  aria-expanded={open3}
-                >
-                  {open3 ? 'See less' : 'See more'}
-                </Button>
-              </Card.Body>
-            </Card>
-          </ElementContainer>
+          <Card>
+            <Card.Img variant="top" src={lab}/>
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                catchy caption text to define the purpose of the image
+              </Card.Text>
+              <Collapse in={open3}>
+                <div id="collapse-text">
+                  {getDescriptionsInList(data.home.problems)}
+                </div>
+              </Collapse>
+              <Button
+                variant="primary"
+                onClick={() => setOpen3(!open3)}
+                aria-controls="collapse-text"
+                aria-expanded={open3}
+              >
+                {open3 ? 'See less' : 'See more'}
+              </Button>
+            </Card.Body>
+          </Card>
         </Col>
-      </ElementContainer>
+      </CustomRow>
     </Container>
   )
 }

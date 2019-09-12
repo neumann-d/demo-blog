@@ -1,7 +1,7 @@
 const color = {
   grey: '#E0E0E0',
   lightGrey: '#777',
-  darkGrey: '#444',
+  darkGrey: '#343a40',
   blueGrey: '#90A4AE',
   brawn: '#A1887F',
   deepOrange: '#FF8A65',
@@ -21,7 +21,7 @@ const color = {
   pink: '#F06292',
   red: '#e57373',
   white: '#fefefe',
-  black: '#000000'
+  black: '#000000',
 }
 
 const zIndex = {

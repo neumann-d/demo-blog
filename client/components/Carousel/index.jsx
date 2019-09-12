@@ -4,10 +4,9 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 
 // Assets
-import lab from '../../../assets/images/lab.jpg'
-import lab1 from '../../../assets/images/lab1.jpg'
-import contact from '../../../assets/images/contact.jpg'
-import walls from '../../../assets/images/walls.jpg'
+import lab from '../../assets/images/lab.jpg'
+import lab1 from '../../assets/images/lab1.jpg'
+import contact from '../../assets/images/contact.jpg'
 
 const CarouselComponent = () => {
   return (

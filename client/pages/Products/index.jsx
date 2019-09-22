@@ -10,15 +10,13 @@ import Figure from 'react-bootstrap/Figure'
 import data from '../data'
 import { Link } from '../../components/Navbar/style'
 
-const variants = ['success', 'primary']
-
 const Products = () => {
   return (
     <Container>
       <CustomRow margin={'70px 0 0 0'}>
         <h1>Our Products</h1>
         <h5>Minions ipsum potatoooo bappleees bee do bee do bee do bee do bee do bee do. Butt tank yuuu! Bee do bee do bee do baboiii. Jeje underweaaar potatoooo bananaaaa poulet tikka masala poopayee butt. Uuuhhh belloo! Underweaaar uuuhhh chasy gelatooo jiji tulaliloo para tú. Butt bee do bee do bee do bananaaaa baboiii hahaha ti aamoo! Belloo! Uuuhhh. Aaaaaah jiji tank yuuu! Bappleees bananaaaa bee do bee do bee do po kass hahaha. Gelatooo wiiiii pepete wiiiii para tú baboiii hahaha belloo!</h5>
-        {data.products.map((product, index) => (
+        {data.products.data.map((product, index) => (
           <Container key={`${product.title}_${index}`}>
             <Jumbotron>
               <Row>

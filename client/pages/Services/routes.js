@@ -5,7 +5,7 @@ import Services from './index'
 
 const ServicesPageRoute= [
   {
-    path: '/',
+    path: '/services',
     component: Services,
     exact: true,
   }

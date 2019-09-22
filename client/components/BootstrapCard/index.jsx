@@ -6,8 +6,8 @@ import { Card } from './style'
 import { List, Item } from './style'
 
 import BoxA from '../../assets/images/BoxA.png'
-const BootstrapCard = ({productData}) => {
-  const { id, title, summary, imageName, points, isActive } = productData
+const BootstrapCard = ({itemData, location}) => {
+  const { title, imageName, points } = itemData
 
   const showPoints = () => {
     return points.map((point, index) => <Item key={`${point.types}_${index}`}>{point.types}</Item>)
@@ -18,7 +18,6 @@ const BootstrapCard = ({productData}) => {
       <Card.Img variant="top" src={imageName}/>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>{summary}</Card.Text>
         {/* {points.length &&
           <Collapse in={!isActive}>
             <div id="collapse-text">
@@ -26,7 +25,7 @@ const BootstrapCard = ({productData}) => {
             </div>
           </Collapse>
         } */}
-        <Link to="/products">
+        <Link to={location}>
           <Button
             variant="primary"
           >

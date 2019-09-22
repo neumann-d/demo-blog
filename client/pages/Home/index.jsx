@@ -13,15 +13,18 @@ import { Jumbotron } from './style'
 
 // Data
 import data from '../data'
+import Alert from 'react-bootstrap/Alert';
 
 const Home = () => {
 
-  const showProducts = () => {
-    return data.products.map((product, index) => {
+  const showProductsAndServices = (data) => {
+    const { data: items, location } = data
+    return items.map((item, index) => {
       return (
-        <Col xs={12} sm={6} lg={4} key={`${product.title}_${index}`}>
+        <Col xs={12} sm={6} lg={4} key={`${item.title}_${index}`}>
           <Card
-            productData={product}
+            itemData={item}
+            location={location}
           />
         </Col>
       )
@@ -42,9 +45,40 @@ const Home = () => {
           <Button variant="primary">Learn more</Button>
         </p>
       </Jumbotron>
-      <CustomRow margin={'10px 0 0 0'}>
-          {showProducts()}
+      {/* products */}
+      <CustomRow margin={'40px 0 0 0'}>
+        <Col xs={0} sm={0} lg={5}>
+          <hr style={{width: '100%', height: '10%', backgroundColor: 'grey'}}/>
+        </Col>
+        <Col xs={12} sm={12} lg={2}>
+          <h4 style={{textAlign: 'center'}}>Products</h4>
+        </Col>
+        <Col xs={0} sm={0} lg={5}>
+          <hr style={{width: '100%', height: '10%', backgroundColor: 'grey'}}/>
+        </Col>
       </CustomRow>
+      <Alert variant={'light'} style={{marginTop: '20px'}}>
+        <CustomRow>
+          {showProductsAndServices(data.products)}
+        </CustomRow>
+      </Alert>
+      {/* Services */}
+      <CustomRow margin={'40px 0 0 0'}>
+        <Col xs={0} sm={0} lg={5}>
+          <hr style={{width: '100%', height: '10%', backgroundColor: 'grey'}}/>
+        </Col>
+        <Col xs={12} sm={12} lg={2}>
+          <h4 style={{textAlign: 'center'}}>Services</h4>
+        </Col>
+        <Col xs={0} sm={0} lg={5}>
+          <hr style={{width: '100%', height: '10%', backgroundColor: 'grey'}}/>
+        </Col>
+      </CustomRow>
+      <Alert variant={'light'} style={{marginTop: '10px'}}>
+        <CustomRow>
+          {showProductsAndServices(data.services)}
+        </CustomRow>
+      </Alert>
     </Container>
   )
 }

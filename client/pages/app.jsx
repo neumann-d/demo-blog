@@ -7,13 +7,15 @@ import Col from 'react-bootstrap/Col'
 import Navbar from '../components/Navbar'
 import { Footer, CustomRow } from './style'
 
+import data from './data'
+
 const App = () => {
   
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar navData={data.navbar} companyName={data.companyName} />
       <div>
-      {renderRoutes(routes)}
+        {renderRoutes(routes)}
       </div>
       <CustomRow margin={'20px 0 0 0'}>
         <Footer>

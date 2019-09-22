@@ -173,14 +173,15 @@ const data = {
           "device development"
         ]
       }
-    ],
-    contact: {
-      name: "Cornelia Broicher",
-      mobile: "",
-      address1: "",
-      address2: "",
-      email: ""
-    }
+    ]
+  },
+  contact: {
+    name: "Cornelia Broicher",
+    mobile: "+49-160-7930397",
+    address1: "TU Berlin,",
+    address2: "Straße des 17 Juni 124,",
+    address3: "12063 Berlin.",
+    email: "cornelia.broicher@tu-berlin.de"
   },
   clients: [
     {
